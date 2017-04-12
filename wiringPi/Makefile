@@ -33,10 +33,10 @@ DYNAMIC=libwiringPi.so.$(VERSION)
 
 #DEBUG	= -g -O0
 DEBUG	= -O2
-CC	= gcc
+CC	    = g++
 INCLUDE	= -I.
 DEFS	= -D_GNU_SOURCE
-CFLAGS	= $(DEBUG) $(DEFS) -Wformat=2 -Wall -Winline $(INCLUDE) -pipe -fPIC
+CFLAGS	= $(DEBUG) $(DEFS) -std=c++11 -Werror -Wno-error=unused-result -Wformat=2 -Winline  $(INCLUDE) -pipe -fPIC
 
 LIBS    =
 
