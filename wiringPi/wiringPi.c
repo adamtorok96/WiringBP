@@ -2736,8 +2736,8 @@ int wiringPiSetup (void)
   if (getenv (ENV_CODES) != NULL)
     wiringPiReturnCodes = TRUE ;
 
-  if (geteuid () != 0)
-    (void)wiringPiFailure (WPI_FATAL, "wiringPiSetup: Must be root. (Did you forget sudo?)\n") ;
+  //if (geteuid () != 0)
+  //  (void)wiringPiFailure (WPI_FATAL, "wiringPiSetup: Must be root. (Did you forget sudo?)\n") ;
 
   if (wiringPiDebug)
     printf ("wiringPi: wiringPiSetup called\n") ;
